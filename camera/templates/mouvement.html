@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Détection</title>
+</head>
+<body>
+  <div align="Center">
+    <h3>D&eacutetection de mouvement</h3> 
+  </div> 
+  <fieldset> <legend>Commandes</legend>
+      <div align="Center">
+	<div id="slider_seuil">
+  	  <p>Seuil d&eacuteclenchement : <span id="valeur_seuil"></span></p>
+	  <input type="range" min="0" max="100" value="10" id="seuil">  
+	</div>
+	<div id="slider_sensibilite">
+  	  <p>Sensibilit&eacute : <span id="valeur_sensibilite"></span></p>
+	  <input type="range" min="0" max="200" value="50" id="sensibilite">  
+	</div>
+	</br>
+	<form action="/mouvement" method="POST">
+	<input type="submit" style="background-color: lightgrey; text-align: center; height: 30px; width: 80px" name="start" value="Démarrer"> 
+	&nbsp&nbsp&nbsp&nbsp
+        <input type="submit" style="background-color: lightgrey; text-align: center; height: 30px; width: 80px" name="stop" value="Arrêter">
+        </form>
+      </div>
+  </fieldset>
+  </br>
+  <form action="/" method="POST">
+    <div align="Right">    
+      <input type="submit" style="background-color: lightgreen; text-align: center; height: 30px; width: 80px" name="acceuil" value="Accueil">
+    </div>
+  </form>  
+</body>
+<script>
+  var slider_seuil = document.getElementById("seuil");
+  var output_seuil = document.getElementById("valeur_seuil");
+  output_seuil.innerHTML = slider_seuil.value;
+  slider_seuil.oninput = function() 
+   {
+     output_seuil.innerHTML = slider_seuil.value;
+     var xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() 
+     {
+       if (this.readyState == 4 && this.status == 200) { }
+     };
+     xhttp.open("GET", "/mouvement_set_seuil?seuil=" + slider_seuil.value, true);
+     xhttp.send();
+   }
+  
+  var slider_sensibilite = document.getElementById("sensibilite");
+  var output_sensibilite = document.getElementById("valeur_sensibilite");
+  output_sensibilite.innerHTML = slider_sensibilite.value;
+  slider_sensibilite.oninput = function() 
+   {
+     output_sensibilite.innerHTML = slider_sensibilite.value;
+     var xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() 
+     {
+       if (this.readyState == 4 && this.status == 200) { }
+     };
+     xhttp.open("GET", "/mouvement_set_sensibilite?sensibilite=" + slider_sensibilite.value, true);
+     xhttp.send();
+   }
+</script>
+</html>

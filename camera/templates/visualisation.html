@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Visualisation</title>
+<style>		
+  img.resize {
+  	max-width:75%;
+  	max-height:75%;
+	}
+</style>
+</head>
+<body>
+  <div align="Center">
+    <h3>Visualisation</h3> 
+  </div> 
+  <fieldset> <legend>Vid&eacuteo</legend>
+    <div align="Center">
+      <img class="resize" src="{{ url_for('image_url') }}">
+    </div>
+  </fieldset>
+  </br>
+  <form action="/" method="POST">
+    <div align="Right">    
+      <input type="submit" style="background-color: lightgreen; text-align: center; height: 30px; width: 80px" name="acceuil" value="Accueil">
+    </div>
+  </form>
+</body>
+</html>

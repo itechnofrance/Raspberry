@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>TimeLapse</title>
+</head> 
+<body>
+<div align="Center">
+  <h3>TimeLapse</h3>
+</div>
+<form action="/timelapse" method="POST">
+  <fieldset> <legend>D&eacutefinition intervalle de prise de vue</legend>
+    <input type="radio" name="intervalle" value="5" checked> 5s
+    <input type="radio" name="intervalle" value="10"> 10s
+    <input type="radio" name="intervalle" value="30"> 30s
+    <input type="radio" name="intervalle" value="60"> 1mn
+    <input type="radio" name="intervalle" value="300"> 5mn
+    <input type="radio" name="intervalle" value="600"> 10mn
+    <input type="radio" name="intervalle" value="1800"> 30mn
+    <input type="radio" name="intervalle" value="3600"> 60mn
+  </fieldset>
+  <fieldset> <legend>Dur&eacutee de prise de vue</legend>
+    <input type="radio" name="duree" value="0" checked> man
+    <input type="radio" name="duree" value="1800"> 30mn
+    <input type="radio" name="duree" value="3600"> 1h
+    <input type="radio" name="duree" value="7200"> 2h
+    <input type="radio" name="duree" value="10800"> 3h
+    <input type="radio" name="duree" value="21600"> 6h
+    <input type="radio" name="duree" value="43200"> 12h
+    <input type="radio" name="duree" value="86400"> 24h
+  </fieldset>
+  <fieldset> <legend>Commandes</legend>
+    <div align="Center">
+      <input type="submit" style="background-color: lightgrey;text-align: center; height: 30px; width: 80px" name="start" value="Démarrer">
+      &nbsp&nbsp&nbsp&nbsp
+      <input type="submit" style="background-color: lightgrey;text-align: center; height: 30px; width: 80px" name="stop" value="Arrêter">
+    </div>
+  </fieldset>
+</form>
+</br>
+<form action="/" method="POST">
+  <div align="Right">    
+    <input type="submit" style="background-color: lightgreen; text-align: center; height: 30px; width: 80px" name="acceuil" value="Accueil">
+  </div>
+</form>
+</body>
+</html>

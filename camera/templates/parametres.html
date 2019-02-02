@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Paramètres</title>
+</head>
+
+<body>
+<div align="Center">
+  <h3>Paramètres</h3>
+</div>
+<form action="/sauve_parametres" method="POST">
+<fieldset> <legend>Sensibilit&eacute ISO (Timelapse-Motion-Affichage)</legend>
+  <input type="radio" name="iso" value="0" checked> Auto
+  <input type="radio" name="iso" value="100"> 100
+  <input type="radio" name="iso" value="200"> 200
+  <input type="radio" name="iso" value="400"> 400
+  <input type="radio" name="iso" value="800"> 800
+</fieldset>
+<fieldset> <legend>Balance des blancs (Motion-Affichage)</legend>
+  <input type="radio" name="wb" value="auto" checked> Auto
+  <input type="radio" name="wb" value="sunlight"> Ensoleillé
+  <input type="radio" name="wb" value="cloudy"> Nuageux
+  <input type="radio" name="wb" value="shade"> Ombre
+  <input type="radio" name="wb" value="tungsten"> Tungstène
+  <input type="radio" name="wb" value="fluorescent"> Fluorescent
+  <input type="radio" name="wb" value="incandescent"> Incandescent
+  <input type="radio" name="wb" value="horizon"> Lever/Coucher soleil
+</fieldset>
+<fieldset> <legend>Mode Exposition (Motion-Affichage)</legend>
+  <input type="radio" name="exposition" value="auto" checked> Auto
+  <input type="radio" name="exposition" value="sports"> Sport
+  <input type="radio" name="exposition" value="beach"> Plage
+  <input type="radio" name="exposition" value="snow"> Neige
+  <input type="radio" name="exposition" value="backlight"> Contre jour
+  <input type="radio" name="exposition" value="spotlight"> Projecteur
+  <input type="radio" name="exposition" value="fireworks"> Feux d'artifice
+  <input type="radio" name="exposition" value="verylong"> Long
+</fieldset>
+<fieldset> <legend>R&eacutesolution (Timelapse-Motion)</legend>
+  <input type="radio" name="resolution" value="0"> 640x480
+  <input type="radio" name="resolution" value="1"> 800x600
+  <input type="radio" name="resolution" value="2"> 1024x768
+  <input type="radio" name="resolution" value="3"> 1920x1080
+  <input type="radio" name="resolution" value="4" checked> 2592x1944
+</fieldset>
+<fieldset> <legend>Commandes</legend>  
+    <div align="Center">
+      <input type="submit" style="background-color: lightgrey; text-align: center; height: 30px; width: 80px" name="save" value="Enregistrer">
+    </div>
+</fieldset>
+</form>
+</body>
+</html>
